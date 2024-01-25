@@ -18,7 +18,7 @@ const Main = () => {
             <span className="text-indigo-700 dark:text-indigo-300">
               web developer{" "}
             </span>
-            focused on elegant solutions and user delight.
+            offering elegant solutions.
           </h2>
           <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
             Good in HTML5, CSS, Tailwind, Bootstrap, Vanilla Javascript, React
