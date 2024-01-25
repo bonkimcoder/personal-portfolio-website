@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,10 +31,13 @@ const Header = () => {
     initApp();
   }, []);
   return (
-    <header className="bg-teal-700 text-white sticky top-0 z-10">
+    <header className="bg-blue-900 text-white sticky top-0 z-10">
       <section className="max-w-4xl mx-auto p-4 flex justify-between items-center">
         <h1 className="text-3xl font-medium">
-          <a href="#hero">Boniface Kimani</a>
+          <a href="#hero" className="flex gap-2 justify-center items-center">
+            <img src={logo} alt="" className="max-h-8" />
+            <h1>Boniface Kimani</h1>
+          </a>
         </h1>
         <div>
           <button id="hamburger-button" className="text-3xl md:hidden">

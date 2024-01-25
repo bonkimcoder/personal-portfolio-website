@@ -3,7 +3,7 @@ import Main from "./containers/Main";
 import Footer from "./containers/Footer";
 
 const App = () => (
-  <div className="bg-gradient-to-r from-teal-100 to-teal-200">
+  <div className="bg-gradient-to-r from-teal-600 to-teal-200">
     <Header />
     <Main />
     <Footer />
