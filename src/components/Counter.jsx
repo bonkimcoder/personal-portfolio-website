@@ -34,7 +34,7 @@ const Counter = () => {
   }, [stats]);
 
   return (
-    <div className="bg-teal-700 flex justify-center flex-wrap sm:mx-5 ss:mx-5 my-6 p-10 rounded-2xl">
+    <div className="max-w-4xl bg-teal-700 flex justify-center flex-wrap  ss:mx-5 my-6 p-10 rounded-2xl">
       {stats.map((stat, index) => (
         <div
           key={stat.id}

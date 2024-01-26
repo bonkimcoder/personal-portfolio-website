@@ -11,7 +11,7 @@ const Footer = () => {
     <footer id="footer" className="bg-teal-700 text-white text-xl">
       <section className="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between items-center justify-center">
         <nav className="hidden md:flex flex-col gap-2" aria-label="footer">
-          <a href="#rockets" className="hover:opacity-90">
+          <a href="#skills" className="hover:opacity-90">
             My Skills
           </a>
           <a href="#testimonials" className="hover:opacity-90">

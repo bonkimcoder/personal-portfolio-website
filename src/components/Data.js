@@ -10,43 +10,43 @@ export const skills = [
     id: 1,
     img: html,
     h3Text: "HTML5",
-    firstParText: "95%",
-    secondParText: "Expert",
+    experience: 5,
+    rating: "Excellent",
   },
   {
     id: 2,
     img: css,
     h3Text: "CSS",
-    firstParText: "95%",
-    secondParText: "Proficient",
+    experience: 5,
+    rating: "Excellent",
   },
   {
     id: 3,
     img: tailwind,
     h3Text: "Tailwindcss",
-    firstParText: "80%",
-    secondParText: "Proficient",
+    experience: 1,
+    rating: "Proficient",
   },
   {
     id: 4,
     img: bootstrap,
     h3Text: "Bootstrap",
-    firstParText: "80%",
-    secondParText: "Proficient",
+    experience: 3,
+    rating: "Proficient",
   },
   {
     id: 5,
     img: javascript,
     h3Text: "Javascript",
-    firstParText: "85%",
-    secondParText: "Proficient",
+    experience: 3,
+    rating: "Super",
   },
   {
     id: 6,
     img: react,
     h3Text: "React",
-    firstParText: "85%",
-    secondParText: "Proficient",
+    experience: 1,
+    rating: "Outstanding",
   },
 ];
 
@@ -63,7 +63,7 @@ export const testimonials = [
   },
   {
     id: 3,
-    text: "The website developed by Boniface is not just visually stunning but also incredibly user-friendly. Navigating through the pages is seamless, and the attention to user experience is evident 💯",
+    text: "The website developed by Boniface is not just visually stunning but also incredibly user-friendly. Navigating through the pages is seamless, and the attention to user experience is evident",
     author: "Millicent Haward",
   },
 ];
@@ -77,11 +77,11 @@ export const stats = [
   {
     id: "stats-2",
     title: "React",
-    value: 97,
+    value: 87,
   },
   {
     id: "stats-3",
     title: "Tailwind",
-    value: 94,
+    value: 90,
   },
 ];

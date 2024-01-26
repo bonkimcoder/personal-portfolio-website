@@ -2,6 +2,7 @@ import myProfile from "../assets/me.png";
 import Divider from "../components/Divider";
 import MainHeadings from "../components/MainHeadings";
 import Counter from "../components/Counter";
+import Contact from "../components/Contact";
 import { skills, testimonials } from "../components/Data";
 
 const Main = () => {
@@ -37,7 +38,7 @@ const Main = () => {
       <Divider />
 
       <section id="numbers" className="p-6 my-12 scroll-mt-20">
-        <MainHeadings text="My Statistics" />
+        <MainHeadings text="Language Proficiency" />
 
         <Counter />
       </section>
@@ -45,30 +46,31 @@ const Main = () => {
       <Divider />
 
       <section
-        id="rockets"
+        id="skills"
         className="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
       >
         <MainHeadings text="My Skill Set" />
 
-        <ul className="max-w-4xl list-none mx-auto my-12 flex flex-col sm:flex-row items-center justify-between sm:flex-wrap gap-8">
-          {skills.map((rocket) => (
+        <ul className="max-w-4xl list-none mx-auto my-12 flex flex-col sm:flex-row items-center sm:justify-between sm:flex-wrap gap-8">
+          {skills.map((skill) => (
             <li
-              key={rocket.id + rocket.h3Text}
-              className="sm:min-w-32 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
+              key={skill.id + skill.h3Text}
+              className="sm:max-w-60 w-full flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
             >
               <img
-                src={rocket.img}
-                alt={rocket.h3Text}
+                src={skill.img}
+                alt={skill.h3Text}
                 className="sm:max-w-52 min-w-52 h-24 mb-6 object-contain"
               />
               <h3 className="text-3xl text-center text-slate-900 dark:text-white">
-                {rocket.h3Text}
+                {skill.h3Text}
               </h3>
-              <p className="hidden sm:block text-3xl text-center mt-2 text-slate-500 dark:text-slate-400">
-                Rating: {rocket.firstParText}
+              <p className="hidden sm:block text-xl text-center mt-2 text-slate-500 dark:text-slate-400">
+                Experience: {skill.experience}{" "}
+                {skill.experience > 1 ? "years" : "year"}
               </p>
-              <p className="sm:hidden text-2xl text-center mt-2 text-slate-500 dark:text-slate-400">
-                Rating: {rocket.secondParText}
+              <p className="sm:hidden text-xl text-center mt-2 text-slate-500 dark:text-slate-400">
+                Rating: {skill.rating}
               </p>
             </li>
           ))}
@@ -104,7 +106,9 @@ const Main = () => {
         className="p-6 my-12 scroll-mt-16 widescreen:section-min-height tallscreen:section-min-height"
       >
         <MainHeadings text="Contact Me" />
-        <form
+        <Contact />
+
+        {/* <form
           action=""
           className="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4"
         >
@@ -129,10 +133,10 @@ const Main = () => {
             required
             className="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
           ></textarea>
-          <button className="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">
+          <button className="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-white p-3 sm:w-48 w-full rounded-xl border border-solid border-slate-900 dark:border-none">
             Submit
           </button>
-        </form>
+        </form> */}
       </section>
     </main>
   );

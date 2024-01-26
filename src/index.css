@@ -6,4 +6,11 @@
   .section-min-height {
     min-height: calc(100vh - 68px);
   }
+
+  .container.focus label {
+    top: -10px;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 0.8rem;
+  }
 }
