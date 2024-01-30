@@ -7,25 +7,25 @@ import { skills, testimonials } from "../components/Data";
 
 const Main = () => {
   return (
-    <main className="max-w-4xl mx-auto ">
+    <main className="max-w-5xl mx-auto ">
       <section
         id="hero"
         className="flex flex-col-reverse justify-center sm:flex-row sm:justify-between
         p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
       >
         <article className="sm:w-1/2">
-          <h2 className="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
+          <h2 className="max-w-md text-3xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
             I am a dedicated{" "}
             <span className="text-indigo-700 dark:text-indigo-300">
               web developer{" "}
             </span>
             offering elegant solutions.
           </h2>
-          <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+          <p className="max-w-md text-xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
             Good in HTML5, CSS, Tailwind, Bootstrap, Vanilla Javascript, React
             Js, Git, Github etc.
           </p>
-          <p className="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+          <p className="max-w-md text-xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
             Bringing Creativity and Precision to Web Development
           </p>
         </article>
@@ -37,7 +37,10 @@ const Main = () => {
       </section>
       <Divider />
 
-      <section id="numbers" className="p-6 my-12 scroll-mt-20">
+      <section
+        id="numbers"
+        className="p-6 my-12 scroll-mt-20 flex flex-col justify-center  gap-8 mb-12 "
+      >
         <MainHeadings text="Language Proficiency" />
 
         <Counter />
@@ -51,11 +54,11 @@ const Main = () => {
       >
         <MainHeadings text="My Skill Set" />
 
-        <ul className="max-w-4xl list-none mx-auto my-12 flex flex-col sm:flex-row items-center sm:justify-between sm:flex-wrap gap-8">
+        <ul className="max-w-5xl list-none mx-auto my-12 flex flex-col sm:flex-row items-center sm:justify-between sm:flex-wrap gap-3">
           {skills.map((skill) => (
             <li
               key={skill.id + skill.h3Text}
-              className="sm:max-w-60 w-full flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
+              className="sm:max-w-[300px] w-full flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
             >
               <img
                 src={skill.img}
@@ -88,7 +91,7 @@ const Main = () => {
         {testimonials.map((testmonial) => (
           <figure key={testmonial.id} className="my-12">
             <blockquote className="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
-              <p className="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+              <p className="text-xl sm:text-xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
                 {testmonial.text}
               </p>
             </blockquote>
@@ -101,42 +104,9 @@ const Main = () => {
 
       <Divider />
 
-      <section
-        id="contact"
-        className="p-6 my-12 scroll-mt-16 widescreen:section-min-height tallscreen:section-min-height"
-      >
+      <section id="contact" className="p-6 my-12 scroll-mt-16">
         <MainHeadings text="Contact Me" />
         <Contact />
-
-        {/* <form
-          action=""
-          className="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col items-left gap-4"
-        >
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-            minLength="3"
-            maxLength="60"
-            placeholder="Your Subject"
-            className="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
-          />
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            required
-            className="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"
-          ></textarea>
-          <button className="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-white p-3 sm:w-48 w-full rounded-xl border border-solid border-slate-900 dark:border-none">
-            Submit
-          </button>
-        </form> */}
       </section>
     </main>
   );

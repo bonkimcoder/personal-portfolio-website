@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer id="footer" className="bg-teal-700 text-white text-xl">
-      <section className="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between items-center justify-center">
+      <section className="max-w-5xl mx-auto p-6 flex flex-col sm:flex-row sm:justify-between items-center justify-center">
         <nav className="hidden md:flex flex-col gap-2" aria-label="footer">
           <a href="#skills" className="hover:opacity-90">
             My Skills

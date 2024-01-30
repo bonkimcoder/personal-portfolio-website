@@ -32,11 +32,11 @@ const Header = () => {
   }, []);
   return (
     <header className="bg-teal-700 text-white sticky top-0 z-10">
-      <section className="max-w-4xl mx-auto p-4 flex justify-between items-center">
+      <section className="max-w-5xl mx-auto p-6 flex justify-between items-center">
         <h1 className="text-3xl font-medium">
           <a href="#hero" className="flex gap-2 justify-center items-center">
             <img src={logo} alt="" className="max-h-8" />
-            <h1>Boniface Kimani</h1>
+            <h1>Boniface</h1>
           </a>
         </h1>
         <div>
@@ -44,6 +44,9 @@ const Header = () => {
             &#9776;
           </button>
           <nav className="hidden md:block space-x-8 text-xl" aria-label="main">
+            <a href="#hero" className="hover:opacity-90 active:scale-95">
+              Home
+            </a>
             <a href="#skills" className="hover:opacity-90">
               Skills
             </a>
@@ -51,7 +54,7 @@ const Header = () => {
               Testimonials
             </a>
             <a href="#contact" className="hover:opacity-90">
-              Contact Me
+              Contact
             </a>
           </nav>
         </div>
@@ -74,7 +77,7 @@ const Header = () => {
             Testmonials
           </a>
           <a href="#contact" className="w-full py-6 hover:opacity-90">
-            Contact Us
+            Contact
           </a>
         </nav>
       </section>

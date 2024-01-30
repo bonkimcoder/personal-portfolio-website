@@ -54,7 +54,7 @@ const Counter = () => {
 
   return (
     <div
-      className="max-w-4xl bg-teal-700 flex justify-center flex-wrap ss:mx-5 my-6 p-10 rounded-2xl"
+      className="max-w-5xl bg-teal-700 flex justify-around flex-wrap ss:mx-5 my-6 p-10 rounded-2xl"
       ref={counterRef}
     >
       {stats.map((stat, index) => (
