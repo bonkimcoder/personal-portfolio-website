@@ -1,109 +1,46 @@
-import myProfile from "../assets/me.png";
 import Divider from "../components/Divider";
 import MainHeadings from "../components/MainHeadings";
 import Counter from "../components/Counter";
 import Contact from "../components/Contact";
 import { skills, testimonials } from "../components/Data";
+import Hero from "../components/Hero";
+import Skills from "../components/Skills";
+import Testmonials from "../components/Testmonials";
 
 const Main = () => {
   return (
     <main className="max-w-5xl mx-auto ">
       <section
         id="hero"
-        className="flex flex-col-reverse justify-center sm:flex-row sm:justify-between
-        p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+        className="flex flex-col-reverse justify-center sm:flex-row sm:justify-between p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
       >
-        <article className="sm:w-1/2">
-          <h2 className="max-w-md text-3xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
-            I am a dedicated{" "}
-            <span className="text-indigo-700 dark:text-indigo-300">
-              web developer{" "}
-            </span>
-            offering elegant solutions.
-          </h2>
-          <p className="max-w-md text-xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
-            Good in HTML5, CSS, Tailwind, Bootstrap, Vanilla Javascript, React
-            Js, Git, Github etc.
-          </p>
-          <p className="max-w-md text-xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
-            Bringing Creativity and Precision to Web Development
-          </p>
-        </article>
-        <img
-          className="w-1/2 h-90 object-contain"
-          src={myProfile}
-          alt="Rocket Dab"
-        />
+        <Hero />
       </section>
       <Divider />
-
       <section
         id="numbers"
         className="p-6 my-12 scroll-mt-20 flex flex-col justify-center  gap-8 mb-12 "
       >
         <MainHeadings text="Language Proficiency" />
-
         <Counter />
       </section>
-
       <Divider />
-
       <section
         id="skills"
         className="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
       >
         <MainHeadings text="My Skill Set" />
-
-        <ul className="max-w-5xl list-none mx-auto my-12 flex flex-col sm:flex-row items-center sm:justify-between sm:flex-wrap gap-3">
-          {skills.map((skill) => (
-            <li
-              key={skill.id + skill.h3Text}
-              className="sm:max-w-[300px] w-full flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black py-6 px-2 rounded-3xl shadow-xl"
-            >
-              <img
-                src={skill.img}
-                alt={skill.h3Text}
-                className="sm:max-w-52 min-w-52 h-24 mb-6 object-contain"
-              />
-              <h3 className="text-3xl text-center text-slate-900 dark:text-white">
-                {skill.h3Text}
-              </h3>
-              <p className="hidden sm:block text-xl text-center mt-2 text-slate-500 dark:text-slate-400">
-                Experience: {skill.experience}{" "}
-                {skill.experience > 1 ? "years" : "year"}
-              </p>
-              <p className="sm:hidden text-xl text-center mt-2 text-slate-500 dark:text-slate-400">
-                Rating: {skill.rating}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <Skills skills={skills} />
       </section>
-
       <Divider />
-
       <section
         id="testimonials"
         className="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
       >
         <MainHeadings text="Testmonials" />
-
-        {testimonials.map((testmonial) => (
-          <figure key={testmonial.id} className="my-12">
-            <blockquote className="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative">
-              <p className="text-xl sm:text-xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
-                {testmonial.text}
-              </p>
-            </blockquote>
-            <figcaption className="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">
-              &#8212;{testmonial.author}
-            </figcaption>
-          </figure>
-        ))}
+        <Testmonials testimonials={testimonials} />
       </section>
-
       <Divider />
-
       <section id="contact" className="p-6 my-12 scroll-mt-16">
         <MainHeadings text="Contact Me" />
         <Contact />
