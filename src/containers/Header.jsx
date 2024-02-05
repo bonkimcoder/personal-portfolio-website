@@ -56,6 +56,14 @@ const Header = () => {
             <a href="#contact" className="hover:opacity-90">
               Contact
             </a>
+            <button
+              onClick={() =>
+                window.open("https://github.com/bonkimcoder", "_blank")
+              }
+              className="bg-teal-500 text-white py-1 px-3 rounded-full hover:bg-teal-400 active:scale-95"
+            >
+              My GitHub
+            </button>
           </nav>
         </div>
       </section>
@@ -79,6 +87,14 @@ const Header = () => {
           <a href="#contact" className="w-full py-6 hover:opacity-90">
             Contact
           </a>
+          <button
+            onClick={() =>
+              window.open("https://github.com/bonkimcoder", "_blank")
+            }
+            className="bg-teal-500 text-white py-1 px-3 rounded-full hover:bg-teal-400 active:scale-95"
+          >
+            My GitHub
+          </button>
         </nav>
       </section>
     </header>
