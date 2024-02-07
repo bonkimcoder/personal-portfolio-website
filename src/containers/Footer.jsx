@@ -5,10 +5,12 @@ import {
   FaTiktok,
   FaTwitter,
 } from "react-icons/fa";
+import { IoIosArrowUp } from "react-icons/io";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer id="footer" className="bg-teal-700 text-white text-xl">
+    <footer id="footer" className="relative bg-teal-700 text-white text-xl">
       <section className="max-w-5xl mx-auto p-6 flex flex-col sm:flex-row sm:justify-between items-center justify-center">
         <nav className="hidden md:flex flex-col gap-2" aria-label="footer">
           <a href="#skills" className="hover:opacity-90">
@@ -46,6 +48,11 @@ const Footer = () => {
           <p className="text-right">All Rights Reserved</p>
         </div>
       </section>
+      <div className="absolute right-5 top-2" title="Scroll Up">
+        <a href="#">
+          <IoIosArrowUp size={30} />
+        </a>
+      </div>
     </footer>
   );
 };
