@@ -12,6 +12,7 @@ const Skills = ({ skills }) => {
             src={skill.img}
             alt={skill.h3Text}
             className="sm:max-w-52 min-w-52 h-24 mb-6 object-contain"
+            loading="lazy"
           />
           <h3 className="text-3xl text-center text-slate-900 dark:text-white">
             {skill.h3Text}

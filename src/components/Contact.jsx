@@ -5,6 +5,22 @@ import shape from "../assets/shape.png";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { useState, useRef } from "react";
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  console.log(formData);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const nameInput = useRef();
@@ -129,12 +145,14 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
-                  required
+                  value={formData.name}
                   ref={nameInput}
+                  onChange={handleChange}
                   onFocus={() => handleFocus("name")}
                   onBlur={(e) => handleBlur("name", e.target.value)}
                   autoComplete="new-name"
                   className="w-full outline-none border-2 border-gray-100 bg-transparent px-3 py-2 text-white font-semibold text-sm leading-tight tracking-wide rounded-lg transition duration-300"
+                  required
                 />
                 <label
                   htmlFor="name"
@@ -154,8 +172,10 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
                   required
                   ref={emailInput}
+                  onChange={handleChange}
                   onFocus={() => handleFocus("email")}
                   onBlur={(e) => handleBlur("email", e.target.value)}
                   className="w-full outline-none border-2 border-gray-100 bg-transparent px-3 py-2 text-white font-semibold text-sm leading-tight tracking-wide rounded-lg transition duration-300"
@@ -178,8 +198,10 @@ const Contact = () => {
                 <input
                   type="tel"
                   name="phone"
+                  value={formData.phone}
                   required
                   ref={phoneInput}
+                  onChange={handleChange}
                   onFocus={() => handleFocus("phone")}
                   onBlur={(e) => handleBlur("phone", e.target.value)}
                   className="w-full outline-none border-2 border-gray-100 bg-transparent px-3 py-2 text-white font-semibold text-sm leading-tight tracking-wide rounded-lg transition duration-300"
@@ -202,7 +224,9 @@ const Contact = () => {
                 <textarea
                   name="message"
                   required
+                  value={formData.message}
                   ref={messageInput}
+                  onChange={handleChange}
                   onFocus={() => handleFocus("message")}
                   onBlur={(e) => handleBlur("message", e.target.value)}
                   className=" 
